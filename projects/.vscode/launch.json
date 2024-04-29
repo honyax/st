@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Server",
+            "type": "node",
+            "request": "launch",
+            "args": [
+                "${workspaceFolder}/backend/src/index.ts"
+            ],
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register"
+            ],
+            "cwd": "${workspaceFolder}",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "preLaunchTask": "tsc: watch",
+        },
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/frontend"
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Full-Stack",
+            "configurations": ["Launch Server", "Launch Chrome"],
+            "stopAll": true
+        }
+    ]
+}
