@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 // フロントエンドをルーティング
-// フロントエンドモジュールが存在しない場合はエラー(500)を表示
+// dist 以下がビルドされた JavaScript ファイル、public 以下が静的ファイル
 app.use(express.static(path.resolve(__dirname, '../../frontend/dist')));
 app.use(express.static(path.resolve(__dirname, '../../frontend/public')));
 
