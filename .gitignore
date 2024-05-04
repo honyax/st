@@ -1,3 +1,5 @@
 projects/backend/node_modules/
 projects/frontend/node_modules/
 projects/node_modules/
+projects/backend/dist/
+projects/frontend/dist/
