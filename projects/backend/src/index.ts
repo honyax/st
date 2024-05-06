@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import * as data from './data';
 
 const port = 3000;
 const app = express();
@@ -18,3 +19,10 @@ app.post('/api/hello', (req, res) => {
 app.listen(port, () => {
     console.log(`server started at http://localhost:${port}`);
 });
+
+async function main() {
+    const csvFilePath = '../data/EdinetcodeDlInfoUTF8.csv';
+    data.Data.readCompanyData(csvFilePath);
+}
+
+main();
