@@ -13,6 +13,30 @@
         "isDefault": true
       },
       "label": "tsc: watch"
+    },
+    {
+      "label": "Build Backend",
+      "type": "typescript",
+      "tsconfig": "backend/tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+    },
+    {
+      "label": "Build Frontend",
+      "type": "typescript",
+      "tsconfig": "frontend/tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
     }
   ]
 }
