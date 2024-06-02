@@ -1,4 +1,4 @@
-export const industries = {
+export const industries: { [key: number]: string } = {
     1: '水産・農林業',
     2: '鉱業',
     3: '建設業',
@@ -36,3 +36,16 @@ export const industries = {
 };
 
 export default industries;
+
+export function getIndustryIdFromName(industryName: string): number {
+    for (const [id, name] of Object.entries(industries)) {
+        if (name === industryName) {
+            return parseInt(id, 10);
+        }
+    }
+    return 99;
+}
+
+export function getIndustryNameFromId(industryId: number): string {
+    return industries[industryId] || 'その他';
+}

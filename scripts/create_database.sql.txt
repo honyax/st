@@ -9,8 +9,8 @@ FLUSH PRIVILEGES;
 CREATE TABLE companies (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    securities_code VARCHAR(20) NOT NULL,
-    edinet_code VARCHAR(20) NOT NULL,
+    securities_code VARCHAR(20) NOT NULL UNIQUE,
+    edinet_code VARCHAR(20) NOT NULL UNIQUE,
     industry_id INT NOT NULL
 ) DEFAULT CHARSET=utf8;
 

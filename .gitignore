@@ -3,3 +3,4 @@ projects/frontend/node_modules/
 projects/node_modules/
 projects/backend/dist/
 projects/frontend/dist/
+projects/shared/dist/

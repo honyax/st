@@ -15,9 +15,24 @@
       "label": "tsc: watch"
     },
     {
+      "label": "Build Shared",
+      "type": "typescript",
+      "tsconfig": "shared/tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+    },
+    {
       "label": "Build Backend",
       "type": "typescript",
       "tsconfig": "backend/tsconfig.json",
+      "dependsOn": [
+        "Build Shared"
+      ],
       "problemMatcher": [
         "$tsc"
       ],
@@ -30,6 +45,9 @@
       "label": "Build Frontend",
       "type": "typescript",
       "tsconfig": "frontend/tsconfig.json",
+      "dependsOn": [
+        "Build Shared"
+      ],
       "problemMatcher": [
         "$tsc"
       ],
